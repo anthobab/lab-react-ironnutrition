@@ -1,5 +1,50 @@
+:root {
+  --vide-init-angle: 15deg;
+}
+
 .App {
+  text-align: left;
+  margin: 1rem;
+}
+
+.App .EmptyDiv {
   text-align: center;
+  width: 100%;
+}
+.App .EmptyLogo {
+  transform: rotate(var(--vide-init-angle));
+  width: 50vw;
+  max-width: 300px;
+  /* transform: rotate(15deg); */
+  /* text-align: center; */
+  animation: App-empty-move infinite 1s ease-in-out normal;
+}
+
+@keyframes App-empty-move {
+  0% {
+    transform: rotate(calc(0deg + var(--vide-init-angle)));
+  }
+  10% {
+    transform: rotate(calc(1deg + var(--vide-init-angle)));
+  }
+  30% {
+    transform: rotate(calc(-1deg + var(--vide-init-angle)));
+  }
+  35% {
+    transform: rotate(calc(0deg + var(--vide-init-angle)));
+  }
+  40% {
+    transform: rotate(calc(1deg + var(--vide-init-angle)));
+  }
+  45% {
+    transform: rotate(calc(-1deg + var(--vide-init-angle)));
+  }
+  60% {
+    transform: rotate(calc(0deg + var(--vide-init-angle)));
+  }
+  100% {
+    transform: rotate(calc(0deg + var(--vide-init-angle)));
+  }
 }
 
 .App-logo {
@@ -35,4 +80,12 @@
   to {
     transform: rotate(360deg);
   }
+}
+
+.App {
+  display: flex;
+  flex-wrap: wrap;
+}
+
+.App {
 }
